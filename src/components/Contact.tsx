@@ -37,36 +37,49 @@ const contactInfo = [
 
 export const Contact = () => {
   return (
-    <section id="contato" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-24 bg-background relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent"></div>
+      <div className="absolute top-1/2 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Entre em <span className="text-primary">Contato</span>
+          <div className="inline-block bg-primary/10 border border-primary/30 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6 animate-glow-pulse">
+            📞 Fale Conosco
+          </div>
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+            Realize Seu Sonho <span className="text-primary drop-shadow-[0_0_20px_rgba(255,85,0,0.5)]">Hoje!</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Estamos prontos para atendê-lo! Venha conhecer nossa loja ou entre em contato
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+            Atendimento rápido e personalizado. Entre em contato agora!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {contactInfo.map((info, index) => {
             const Icon = info.icon;
             return (
               <Card 
                 key={index}
-                className="group bg-card border-border hover:border-primary transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 animate-slide-up hover:-translate-y-2"
+                className="group bg-card/80 backdrop-blur-sm border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,85,0,0.3)] animate-slide-up hover:-translate-y-3 relative overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardContent className="p-8 text-center">
+                {/* Shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                
+                <CardContent className="p-8 text-center relative z-10">
                   <div className="mb-6 flex justify-center">
-                    <div className="p-4 bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors duration-300 group-hover:animate-pulse-glow">
-                      <Icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                      <div className="relative p-5 bg-gradient-to-br from-primary/20 to-primary/5 rounded-full group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300 border-2 border-primary/30 group-hover:border-primary group-hover:animate-glow-pulse">
+                        <Icon className="h-12 w-12 text-primary group-hover:scale-125 transition-all duration-300" />
+                      </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">
+                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">
                     {info.title}
                   </h3>
-                  <p className="text-muted-foreground mb-1 font-medium">
+                  <p className="text-foreground mb-1 font-bold text-lg">
                     {info.content}
                   </p>
                   {info.content2 && (
@@ -75,10 +88,11 @@ export const Contact = () => {
                     </p>
                   )}
                   <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold mt-4 group-hover:scale-105 transition-all duration-300"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold mt-4 py-6 rounded-xl group-hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(255,85,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,85,0,0.5)] relative overflow-hidden"
                     onClick={() => window.open(info.action, "_blank")}
                   >
-                    {info.buttonText}
+                    <span className="relative z-10">{info.buttonText}</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                   </Button>
                 </CardContent>
               </Card>
@@ -86,15 +100,47 @@ export const Contact = () => {
           })}
         </div>
 
-        {/* WhatsApp Floating Button */}
-        <div className="fixed bottom-8 right-8 z-50 animate-float">
-          <Button
-            size="lg"
-            className="rounded-full w-16 h-16 bg-primary hover:bg-primary/90 shadow-2xl animate-pulse-glow"
-            onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-          >
-            <Phone className="h-8 w-8" />
-          </Button>
+        {/* Urgency CTA */}
+        <div className="max-w-4xl mx-auto text-center animate-fade-in bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-2 border-primary rounded-2xl p-10 backdrop-blur-sm relative overflow-hidden" style={{ animationDelay: "400ms" }}>
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-shine"></div>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 relative z-10">
+            🚗 Não Perca Tempo! Seu Carro Ideal Te Espera
+          </h3>
+          <p className="text-xl text-muted-foreground mb-6 relative z-10">
+            Atendimento imediato pelo WhatsApp ou telefone
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <Button 
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-7 rounded-xl shadow-[0_20px_60px_rgba(255,85,0,0.4)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.6)] transition-all duration-300 hover:scale-110"
+              onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
+            >
+              <Phone className="mr-2 h-6 w-6 animate-bounce-slow" />
+              WhatsApp Agora
+            </Button>
+            <Button 
+              size="lg"
+              variant="outline"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-bold text-lg px-10 py-7 rounded-xl transition-all duration-300 hover:scale-110"
+              onClick={() => window.open("tel:+5511941898080", "_self")}
+            >
+              📞 (11) 94189-8080
+            </Button>
+          </div>
+        </div>
+
+        {/* WhatsApp Floating Button - Enhanced */}
+        <div className="fixed bottom-8 right-8 z-50 animate-bounce-slow">
+          <div className="relative">
+            <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse"></div>
+            <Button
+              size="lg"
+              className="relative rounded-full w-20 h-20 bg-primary hover:bg-primary/90 shadow-[0_20px_60px_rgba(255,85,0,0.6)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.8)] transition-all duration-300 hover:scale-110 animate-glow-pulse"
+              onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
+            >
+              <Phone className="h-10 w-10" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
