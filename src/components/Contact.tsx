@@ -1,6 +1,7 @@
 import { Phone, MapPin, Instagram, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { ScheduleDialog } from "./ScheduleDialog";
 
 const contactInfo = [
   {
@@ -110,14 +111,7 @@ export const Contact = () => {
             Atendimento imediato pelo WhatsApp ou telefone
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-            <Button 
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-7 rounded-xl shadow-[0_20px_60px_rgba(255,85,0,0.4)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.6)] transition-all duration-300 hover:scale-110"
-              onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-            >
-              <Phone className="mr-2 h-6 w-6 animate-bounce-slow" />
-              WhatsApp Agora
-            </Button>
+            <ScheduleDialog />
             <Button 
               size="lg"
               variant="outline"
@@ -129,19 +123,6 @@ export const Contact = () => {
           </div>
         </div>
 
-        {/* WhatsApp Floating Button - Enhanced */}
-        <div className="fixed bottom-8 right-8 z-50 animate-bounce-slow">
-          <div className="relative">
-            <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse"></div>
-            <Button
-              size="lg"
-              className="relative rounded-full w-20 h-20 bg-primary hover:bg-primary/90 shadow-[0_20px_60px_rgba(255,85,0,0.6)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.8)] transition-all duration-300 hover:scale-110 animate-glow-pulse"
-              onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-            >
-              <Phone className="h-10 w-10" />
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Car, Fuel, Calendar, Gauge, Phone } from "lucide-react";
+import { Car, Fuel, Calendar, Gauge } from "lucide-react";
+import { ScheduleDialog } from "./ScheduleDialog";
 
 interface VehicleCardProps {
   brand: string;
@@ -80,16 +81,20 @@ export const VehicleCard = ({ brand, model, year, price, mileage, fuel, image, d
           </div>
         </div>
 
-        <Button 
-          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base py-6 rounded-xl group-hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(255,85,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,85,0,0.5)] relative overflow-hidden"
-          onClick={() => window.open("tel:+5511941898080", "_self")}
-        >
-          <span className="relative z-10 flex items-center justify-center">
-            <Phone className="mr-2 h-5 w-5" />
-            Consultar Agora
-          </span>
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-        </Button>
+        <ScheduleDialog 
+          vehicleName={`${brand} ${model} ${year}`}
+          triggerButton={
+            <Button 
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-base py-6 rounded-xl group-hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(255,85,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,85,0,0.5)] relative overflow-hidden"
+            >
+              <span className="relative z-10 flex items-center justify-center">
+                <Calendar className="mr-2 h-5 w-5" />
+                Agendar Visita
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </Button>
+          }
+        />
       </CardContent>
     </Card>
   );

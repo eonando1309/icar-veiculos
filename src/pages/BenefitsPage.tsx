@@ -1,13 +1,15 @@
 import { Header } from "@/components/Header";
 import { Benefits } from "@/components/Benefits";
 import { Footer } from "@/components/Footer";
-import { Phone, Shield, Award } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ScheduleDialog } from "@/components/ScheduleDialog";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
+import { Shield, Award } from "lucide-react";
 
 const BenefitsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <UrgencyBanner />
       <main className="pt-20">
         {/* Hero Section for Benefits Page */}
         <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background overflow-hidden">
@@ -83,17 +85,7 @@ const BenefitsPage = () => {
                 <p className="text-xl text-muted-foreground mb-8 relative z-10">
                   Visite nossa loja em Guarulhos ou fale conosco agora mesmo!
                 </p>
-                <Button 
-                  size="lg"
-                  className="relative bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-10 py-7 rounded-xl shadow-[0_20px_60px_rgba(255,85,0,0.4)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.6)] transition-all duration-300 hover:scale-110 overflow-hidden z-10"
-                  onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-                >
-                  <span className="relative z-10 flex items-center">
-                    <Phone className="mr-2 h-6 w-6 animate-bounce-slow" />
-                    Entre em Contato Agora
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                </Button>
+                <ScheduleDialog />
               </div>
             </div>
           </div>
@@ -101,18 +93,9 @@ const BenefitsPage = () => {
       </main>
       <Footer />
 
-      {/* WhatsApp Floating Button */}
+      {/* Schedule Floating Button */}
       <div className="fixed bottom-8 right-8 z-50 animate-bounce-slow">
-        <div className="relative">
-          <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse"></div>
-          <Button
-            size="lg"
-            className="relative rounded-full w-20 h-20 bg-primary hover:bg-primary/90 shadow-[0_20px_60px_rgba(255,85,0,0.6)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.8)] transition-all duration-300 hover:scale-110 animate-glow-pulse"
-            onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-          >
-            <Phone className="h-10 w-10" />
-          </Button>
-        </div>
+        <ScheduleDialog variant="floating" />
       </div>
     </div>
   );

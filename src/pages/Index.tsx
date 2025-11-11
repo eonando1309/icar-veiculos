@@ -1,19 +1,30 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
-import { Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ScheduleDialog } from "@/components/ScheduleDialog";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <UrgencyBanner />
       <main>
         <Hero />
         
-        {/* Quick Action Section */}
+        {/* Quick Action Section - Updated with urgency */}
         <section className="py-20 bg-secondary relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary to-background opacity-50"></div>
+          
+          {/* Urgency banner */}
+          <div className="container mx-auto px-4 mb-8 relative z-10">
+            <div className="max-w-4xl mx-auto text-center bg-primary/20 border-2 border-primary rounded-2xl p-6 animate-pulse">
+              <p className="text-lg md:text-2xl font-bold text-foreground">
+                🔥 <span className="text-primary">ÚLTIMA CHANCE!</span> Veículos saindo rápido! Agende sua visita HOJE
+              </p>
+            </div>
+          </div>
+          
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-5xl mx-auto">
               <div className="text-center mb-16">
@@ -80,18 +91,9 @@ const Index = () => {
       </main>
       <Footer />
 
-      {/* WhatsApp Floating Button */}
+      {/* Schedule Floating Button */}
       <div className="fixed bottom-8 right-8 z-50 animate-bounce-slow">
-        <div className="relative">
-          <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse"></div>
-          <Button
-            size="lg"
-            className="relative rounded-full w-20 h-20 bg-primary hover:bg-primary/90 shadow-[0_20px_60px_rgba(255,85,0,0.6)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.8)] transition-all duration-300 hover:scale-110 animate-glow-pulse"
-            onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-          >
-            <Phone className="h-10 w-10" />
-          </Button>
-        </div>
+        <ScheduleDialog variant="floating" />
       </div>
     </div>
   );

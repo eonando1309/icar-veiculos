@@ -1,12 +1,15 @@
 import { Header } from "@/components/Header";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { ScheduleDialog } from "@/components/ScheduleDialog";
+import { UrgencyBanner } from "@/components/UrgencyBanner";
 import { Phone, MapPin, Clock } from "lucide-react";
 
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
+      <UrgencyBanner />
       <main className="pt-20">
         {/* Hero Section for Contact Page */}
         <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background overflow-hidden">
@@ -96,17 +99,9 @@ const ContactPage = () => {
       </main>
       <Footer />
 
-      {/* WhatsApp Floating Button */}
+      {/* Schedule Floating Button */}
       <div className="fixed bottom-8 right-8 z-50 animate-bounce-slow">
-        <div className="relative">
-          <div className="absolute inset-0 bg-primary/30 rounded-full blur-xl animate-pulse"></div>
-          <button
-            className="relative rounded-full w-20 h-20 bg-primary hover:bg-primary/90 shadow-[0_20px_60px_rgba(255,85,0,0.6)] hover:shadow-[0_25px_70px_rgba(255,85,0,0.8)] transition-all duration-300 hover:scale-110 animate-glow-pulse flex items-center justify-center"
-            onClick={() => window.open("https://wa.me/5511941898080", "_blank")}
-          >
-            <Phone className="h-10 w-10 text-primary-foreground" />
-          </button>
-        </div>
+        <ScheduleDialog variant="floating" />
       </div>
     </div>
   );
