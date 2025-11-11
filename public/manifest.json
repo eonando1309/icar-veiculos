@@ -1,0 +1,23 @@
+{
+  "name": "ICAR Veículos",
+  "short_name": "ICAR",
+  "description": "Os melhores veículos seminovos e usados de Guarulhos e região",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FF5500",
+  "icons": [
+    {
+      "src": "/logo-icar.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo-icar.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

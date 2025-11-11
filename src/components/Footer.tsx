@@ -1,5 +1,4 @@
 import { Instagram, Phone, MapPin } from "lucide-react";
-import logoIcar from "@/assets/logo-icar.png";
 
 export const Footer = () => {
   return (
@@ -8,11 +7,17 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo e Descrição */}
           <div className="animate-fade-in">
-            <img 
-              src={logoIcar} 
-              alt="ICAR Veículos" 
-              className="h-12 w-auto mb-4"
-            />
+            <div className="flex items-center gap-3 mb-4 group">
+              <div className="relative">
+                <div className="absolute inset-0 bg-primary/20 rounded-lg blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                <img 
+                  src="/logo-icar.png" 
+                  alt="ICAR Veículos" 
+                  className="h-10 w-auto relative drop-shadow-[0_0_15px_rgba(255,85,0,0.4)]"
+                />
+              </div>
+              <span className="text-lg font-bold text-foreground">ICAR</span>
+            </div>
             <p className="text-muted-foreground leading-relaxed">
               Os melhores veículos seminovos e usados de Guarulhos e região. 
               Qualidade, confiança e atendimento excepcional.

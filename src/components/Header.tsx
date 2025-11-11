@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoIcar from "@/assets/logo-icar.png";
 import { NavLink } from "@/components/NavLink";
 
 export const Header = () => {
@@ -18,8 +17,16 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <NavLink to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
-            <img src={logoIcar} alt="ICAR - Veículos Seminovos Guarulhos" className="h-12 w-auto" />
+          <NavLink to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300 group">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 rounded-lg blur-lg group-hover:blur-xl transition-all duration-300 group-hover:bg-primary/40"></div>
+              <img 
+                src="/logo-icar.png" 
+                alt="ICAR - Veículos Seminovos Guarulhos" 
+                className="h-14 w-auto relative drop-shadow-[0_0_15px_rgba(255,85,0,0.4)] group-hover:drop-shadow-[0_0_25px_rgba(255,85,0,0.6)] transition-all duration-300" 
+              />
+            </div>
+            <span className="hidden sm:inline text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">ICAR</span>
           </NavLink>
 
           {/* Desktop Navigation */}
