@@ -47,10 +47,10 @@ export const Benefits = () => {
           <div className="inline-block bg-primary/10 border border-primary/30 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6 animate-glow-pulse">
             Diferenciais ICAR
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 px-4 md:px-8 py-6 rounded-2xl bg-black-deep/85 backdrop-blur-md border border-primary/30 inline-block shadow-[0_0_60px_rgba(255,85,0,0.3)]">
             Por Que Escolher a <span className="text-primary drop-shadow-[0_0_20px_rgba(255,85,0,0.5)]">ICAR?</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto px-6 py-4 rounded-xl bg-black-deep/70 backdrop-blur-sm border border-primary/20 mt-6 shadow-[0_0_40px_rgba(255,85,0,0.2)]">
             Mais de 10 anos transformando sonhos em realidade
           </p>
         </div>

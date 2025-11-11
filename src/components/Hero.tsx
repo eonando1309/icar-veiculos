@@ -53,18 +53,18 @@ export const Hero = () => {
           </span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 animate-fade-in leading-tight" style={{ animationDelay: "100ms" }}>
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 animate-fade-in leading-tight px-4 md:px-8 py-6 md:py-8 rounded-2xl bg-black-deep/85 backdrop-blur-md border border-primary/30 shadow-[0_0_60px_rgba(255,85,0,0.3)]" style={{ animationDelay: "100ms" }}>
           Encontre Seu{" "}
           <span className="text-primary animate-glow-pulse inline-block drop-shadow-[0_0_30px_rgba(255,85,0,0.5)]">
             Carro dos Sonhos
           </span>
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 mb-4 max-w-4xl mx-auto animate-slide-up font-medium" style={{ animationDelay: "200ms" }}>
+        <p className="text-xl md:text-2xl lg:text-3xl text-foreground/95 mb-4 max-w-4xl mx-auto animate-slide-up font-medium px-6 md:px-10 py-4 md:py-6 rounded-2xl bg-black-deep/80 backdrop-blur-md border border-primary/20 shadow-[0_0_40px_rgba(255,85,0,0.2)]" style={{ animationDelay: "200ms" }}>
           Os melhores veículos seminovos e usados de Guarulhos e região
         </p>
         
-        <p className="text-lg md:text-xl text-primary font-bold mb-12 animate-slide-up max-w-3xl mx-auto" style={{ animationDelay: "300ms" }}>
+        <p className="text-lg md:text-xl text-primary font-bold mb-12 animate-slide-up max-w-3xl mx-auto px-6 md:px-10 py-4 md:py-5 rounded-xl bg-black-deep/75 backdrop-blur-sm border border-primary/30 shadow-[0_0_30px_rgba(255,85,0,0.25)]" style={{ animationDelay: "300ms" }}>
           ✓ Inspeção Rigorosa  ✓ Preços Competitivos  ✓ Financiamento Facilitado
         </p>
 

@@ -62,10 +62,10 @@ export const Vehicles = () => {
     <section id="veiculos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 px-4 md:px-8 py-6 rounded-2xl bg-black-deep/85 backdrop-blur-md border border-primary/30 inline-block shadow-[0_0_60px_rgba(255,85,0,0.3)]">
             Veículos em <span className="text-primary">Destaque</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto px-6 py-4 mt-6 rounded-xl bg-black-deep/70 backdrop-blur-sm border border-primary/20 shadow-[0_0_40px_rgba(255,85,0,0.2)]">
             Confira nossa seleção de veículos seminovos com a melhor qualidade e procedência
           </p>
         </div>

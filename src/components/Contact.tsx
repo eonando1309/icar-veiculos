@@ -47,10 +47,10 @@ export const Contact = () => {
           <div className="inline-block bg-primary/10 border border-primary/30 text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6 animate-glow-pulse">
             📞 Fale Conosco
           </div>
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold mb-6 px-4 md:px-8 py-6 rounded-2xl bg-black-deep/85 backdrop-blur-md border border-primary/30 inline-block shadow-[0_0_60px_rgba(255,85,0,0.3)]">
             Realize Seu Sonho <span className="text-primary drop-shadow-[0_0_20px_rgba(255,85,0,0.5)]">Hoje!</span>
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto px-6 py-4 mt-6 rounded-xl bg-black-deep/70 backdrop-blur-sm border border-primary/20 shadow-[0_0_40px_rgba(255,85,0,0.2)]">
             Atendimento rápido e personalizado. Entre em contato agora!
           </p>
         </div>
@@ -103,10 +103,10 @@ export const Contact = () => {
         {/* Urgency CTA */}
         <div className="max-w-4xl mx-auto text-center animate-fade-in bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-2 border-primary rounded-2xl p-10 backdrop-blur-sm relative overflow-hidden" style={{ animationDelay: "400ms" }}>
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent animate-shine"></div>
-          <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 relative z-10">
+          <h3 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4 relative z-10 px-4 py-3 rounded-xl bg-black-deep/80 backdrop-blur-sm border border-primary/20 shadow-[0_0_30px_rgba(255,85,0,0.2)]">
             🚗 Não Perca Tempo! Seu Carro Ideal Te Espera
           </h3>
-          <p className="text-xl text-muted-foreground mb-6 relative z-10">
+          <p className="text-xl text-muted-foreground mb-6 relative z-10 px-4 py-2 rounded-lg bg-black-deep/60 backdrop-blur-sm">
             Atendimento imediato pelo WhatsApp ou telefone
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">

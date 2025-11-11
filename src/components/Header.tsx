@@ -28,11 +28,11 @@ export const Header = () => {
               <NavLink
                 key={item.to}
                 to={item.to}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-semibold text-lg relative group"
-                activeClassName="text-primary"
+                className="text-foreground hover:text-primary transition-colors duration-300 font-semibold text-lg relative group px-4 py-2 rounded-lg hover:bg-black-soft/50 backdrop-blur-sm"
+                activeClassName="text-primary bg-primary/10"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary group-hover:opacity-100 opacity-0 transition-all duration-300"></span>
               </NavLink>
             ))}
             
